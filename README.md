@@ -1,10 +1,6 @@
-# MaterialUI - Vite.js example
+# MaterialUI - Vite.js Syllabus Activity
 
 ## How to use
-
-Download the example [or clone the repo](https://github.com/mui/material-ui):
-
-<!-- #default-branch-switch -->
 
 Install it and run:
 
@@ -13,22 +9,21 @@ yarn install
 yarn run dev
 ```
 
-or:
-
-<!-- #default-branch-switch -->
-
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-vite)
-
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-vite)
-
 ## The idea behind the example
 
 This example uses [Vite.js](https://github.com/vitejs/vite).
 It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in MaterialUI v6.
 
-## What's next?
+## What's your task?
 
-<!-- #default-branch-switch -->
+### Fetch Data from Syllabus API:
+- Instead of using hardcoded rows in the useEffect, make an API request to fetch the data from the Syllabus API. Use the following endpoint: [courses.ianapplebaum.com/api](https://courses.ianapplebaum.com/public/docs/). I will provide you the API key to your group.
+- You can use fetch() Links to an external site. or axios Links to an external site. to make the API request. Update the state with the fetched data to display it in the DataGrid Links to an external site..
+- **Hint** you should use the useEffect Links to an external site. hook to make the call. Also you will have to place the API key in your project which is **BAD PRACTICE**, we will talk about securing keys in another class.
+Display the Current Event:
 
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+Dynamically update the "Current Event" card to display details of the event occurring on the current date (if available).
+If no event matches the current date, display a placeholder message like "No event today."
+
+More information on Canvas. Start editing in `src/App.jsx`.
+
