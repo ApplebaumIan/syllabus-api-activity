@@ -20,7 +20,26 @@ const paginationModel = { page: 0, pageSize: 5 };
 
 export default function App() {
     const [rows,setRow] = useState([])
+    const [hobbie,setHobbie] = useState(null)
+    const [test,setTest] = useState(null)
     useEffect(()=>{
+        const requestOptions = {
+            method: "GET",
+            redirect: "follow",
+            // mode: 'no-cors',
+
+        };
+
+        fetch("http://localhost:3000/hobbies", requestOptions)
+            .then((response) => response.json())
+            .then((result) => setHobbie(result[0]))
+            .catch((error) => console.error(error));
+        fetch("http://localhost:3000/blah", requestOptions)
+            .then((response) => response.json())
+            .then((result) => )
+            .catch((error) => console.error(error));
+
+
         setRow( [
             { id: 1, week: 1, event: 'Jon', description:"Axonas sunt calceuss de noster buxum.", date: "2024-10-02" },
             { id: 2, week: 2, event: 'Cersei', description:"Ubi est superbus coordinatae?", date: "2024-10-03" },
@@ -43,10 +62,10 @@ export default function App() {
           <Container maxWidth={"sm"} ><Card sx={{minWidth: 275}}>
               <CardContent>
                   <Typography variant="h5" component="h5" sx={{mb: 2}}>
-                      Current Event: Title
+                      Hobby Selected {hobbie}
                   </Typography>
                   <Typography variant="p" component="p" sx={{mb: 2}}>
-                      Replace me with description of current event!
+                      {test}
                   </Typography>
               </CardContent>
           </Card></Container>
